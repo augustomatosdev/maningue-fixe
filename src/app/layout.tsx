@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { MainHeader } from "./home-components/main-header";
+import Footer from "@/components/footer";
+import { CartDrawer } from "@/components/cart-drawer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Nunito_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap", // Melhora a performance de carregamento da fonte
 });
 
 export const metadata: Metadata = {
@@ -25,9 +24,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} antialiased bg-pink-50 text-gray-700`}
       >
-        {children}
+        <SidebarProvider>
+          <SidebarInset className="flex flex-col min-h-screen">
+            <MainHeader />
+            <CartDrawer />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );

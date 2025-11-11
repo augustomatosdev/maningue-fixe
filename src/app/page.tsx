@@ -1,65 +1,152 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import Link from "next/link";
+import { HeroCarousel } from "./home-components/hero-carousel";
+import { MonthHighlight } from "@/components/month-highlight";
+import { SubscribeSection } from "@/components/subscribe-section";
+import { InstagramSection } from "@/components/instagram-section";
+import { AppDownload } from "@/components/app-download";
+import Footer from "@/components/footer";
+import { ProductsCarousel } from "./home-components/products-carousel";
+import { ServicesCarousel } from "./home-components/services-carousel";
+import { BrandsCarousel } from "./home-components/brands-carousel";
+import { brands, products, vendors } from "@/lib/mock-data";
+import type { ServicePreview } from "@/components/service-item";
+
+export const metadata: Metadata = {
+  title: "Maningue Fixe | Beleza e bem-estar com curadoria",
+  description:
+    "Descubra marcas exclusivas, produtos favoritos e serviços de beleza recomendados pela curadoria Maningue Fixe.",
+};
+
+interface HomeSectionProps {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  cta?: {
+    label: string;
+    href: string;
+  };
+  children: ReactNode;
+}
+
+const HomeSection = ({
+  id,
+  eyebrow,
+  title,
+  subtitle,
+  cta,
+  children,
+}: HomeSectionProps) => (
+  <section id={id} aria-labelledby={`${id}-title`} className="py-12">
+    <div className="mx-auto flex max-w-screen-2xl flex-col gap-6 px-4">
+      <header className="flex items-center justify-between gap-3">
+        <div className="space-y-2 max-w-3xl w-[70%] md:w-full">
+          {/* {eyebrow ? (
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-pink-500">
+              {eyebrow}
+            </p>
+          ) : null} */}
+          <h2
+            id={`${id}-title`}
+            className="text-3xl font-bold text-gray-900 md:text-4xl"
+          >
+            {title}
+          </h2>
+          {subtitle ? (
+            <p className="text-base text-gray-600 md:text-lg">{subtitle}</p>
+          ) : null}
+        </div>
+        {cta ? (
+          <Link
+            href={cta.href}
+            className="text-xs font-bold uppercase tracking-wide text-pink-600 underline-offset-4 hover:underline"
+            aria-label={`${cta.label} - ${title}`}
+          >
+            {cta.label}
+          </Link>
+        ) : null}
+      </header>
+      {children}
+    </div>
+  </section>
+);
+
+const featuredServices: ServicePreview[] = vendors
+  .slice(0, 6)
+  .map((vendor, index) => ({
+    id: vendor.id,
+    slug: vendor.slug,
+    name: vendor.name,
+    coverImage: vendor.coverImage,
+    address: vendor.address,
+    rating: vendor.rating,
+    reviewCount: vendor.totalReviews,
+    tags: ["Salão de beleza", "Premium"],
+    priceFrom: 80 + index * 15,
+    nextAvailability:
+      index % 2 === 0 ? "Agenda disponível hoje" : "Vagas esta semana",
+    distanceInKm: 1.5 + index * 0.8,
+  }));
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <main>
+        <HeroCarousel />
+
+        <HomeSection
+          id="brands"
+          eyebrow="marcas"
+          title="Marcas parceiras"
+          subtitle=""
+        >
+          <BrandsCarousel brands={brands} />
+        </HomeSection>
+
+        <HomeSection
+          id="products"
+          eyebrow="produtos"
+          title="Conheça nossos produtos"
+          subtitle="Seleção atualizada com lançamentos, best-sellers e preços especiais."
+          cta={{ label: "Ver todos", href: "/products" }}
+        >
+          <ProductsCarousel products={products} />
+        </HomeSection>
+
+        <HomeSection
+          id="services"
+          eyebrow="serviços"
+          title="Serviços recomendados"
+          subtitle="Experiências de beleza presenciais com serviços perto de você."
+          cta={{ label: "Ver todos", href: "/services" }}
+        >
+          <ServicesCarousel services={featuredServices} />
+        </HomeSection>
+
+        <section className="py-12">
+          <div className="mx-auto max-w-screen-2xl px-4">
+            <MonthHighlight />
+          </div>
+        </section>
+
+        <section className="py-12">
+          <div className="mx-auto max-w-screen-2xl px-4">
+            <AppDownload />
+          </div>
+        </section>
+
+        <section className="py-12">
+          <InstagramSection />
+        </section>
+
+        <section className="py-12">
+          <SubscribeSection />
+        </section>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }
