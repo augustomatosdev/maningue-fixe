@@ -21,9 +21,9 @@ const FALLBACK_IMAGE = "/png-icons/makeup.png";
 const FALLBACK_TITLE = "Produto em destaque";
 const CARD_MIN_HEIGHT = "26rem";
 const TITLE_MIN_HEIGHT = "3.25rem";
-const CURRENCY = new Intl.NumberFormat("pt-BR", {
+const CURRENCY = new Intl.NumberFormat("pt-AO", {
   style: "currency",
-  currency: "BRL",
+  currency: "AOA",
 });
 
 const formatCurrency = (value?: number | null) =>
@@ -125,7 +125,7 @@ export const ProductItem = ({ product }: ProductItemProps) => {
         </div>
       </div>
 
-      <ProductItemActions />
+      <ProductItemActions product={product ?? {}} />
     </article>
   );
 };

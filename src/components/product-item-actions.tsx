@@ -1,12 +1,9 @@
 "use client";
-import React from "react";
 import { Button } from "./ui/button";
-import { Plus, ShoppingCart } from "lucide-react";
-import { useCartOpenStore } from "@/store/use-cart";
 import Link from "next/link";
+import { VariantsDialog } from "./variants-dialog";
 
-export const ProductItemActions = () => {
-  const openCart = useCartOpenStore((state: any) => state.openCart);
+export const ProductItemActions = ({ product }: { product: any }) => {
   return (
     <div>
       <div className="gap-2 hidden md:flex">
@@ -15,19 +12,11 @@ export const ProductItemActions = () => {
           className="bg-pink-600 text-white flex-1 font-bold hover:bg-pink-700"
           asChild
         >
-          <Link href="/products/1">
+          <Link href={`/products/${product.slug}`}>
             <p>Comprar</p>
           </Link>
         </Button>
-        <Button
-          size="lg"
-          className="text-pink-600 font-bold hover:text-pink-700 border-2 cursor-pointer"
-          variant="outline"
-          onClick={() => openCart()}
-        >
-          <Plus className="w-4 h-4" />
-          <ShoppingCart className="w-4 h-4" />
-        </Button>
+        <VariantsDialog product={product} buttonSize="lg" />
       </div>
       <div className="gap-2 flex md:hidden">
         <Button
@@ -35,19 +24,11 @@ export const ProductItemActions = () => {
           className="bg-pink-600 text-white flex-1 font-bold hover:bg-pink-700"
           asChild
         >
-          <Link href="/products/1">
+          <Link href={`/products/${product.slug}`}>
             <p>Comprar</p>
           </Link>
         </Button>
-        <Button
-          size="sm"
-          className="text-pink-600 font-bold hover:text-pink-700 border-2 cursor-pointer"
-          variant="outline"
-          onClick={() => openCart()}
-        >
-          <Plus className="w-4 h-4" />
-          <ShoppingCart className="w-4 h-4" />
-        </Button>
+        <VariantsDialog product={product} buttonSize="sm" />
       </div>
     </div>
   );

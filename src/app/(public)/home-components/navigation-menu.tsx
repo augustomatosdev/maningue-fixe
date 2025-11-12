@@ -12,7 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { productCategories } from "@/lib/product-categories";
+import { productCategories } from "@/lib/mock-data";
 
 export function NavigationMenu() {
   const isMobile = useIsMobile();
@@ -24,9 +24,17 @@ export function NavigationMenu() {
     >
       <NavigationMenuList className="flex-wrap justify-center items-center gap-4 w-full flex">
         {productCategories.map((item: any) => (
-          <NavigationMenuItem className="hidden md:block" key={item.title}>
-            <NavigationMenuTrigger className="font-bold">
-              {item.title}
+          <NavigationMenuItem className="hidden md:block" key={item.name}>
+            <NavigationMenuLink asChild>
+              <Link
+                href={`/products?categoryId=${item.slug}`}
+                className="font-bold"
+              >
+                {item.name}
+              </Link>
+            </NavigationMenuLink>
+            {/* <NavigationMenuTrigger className="font-bold">
+              {item.name}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-4">
@@ -42,7 +50,7 @@ export function NavigationMenu() {
                   </NavigationMenuLink>
                 </li>
               </ul>
-            </NavigationMenuContent>
+            </NavigationMenuContent> */}
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>

@@ -30,9 +30,9 @@ const FALLBACK_NAME = "Serviço em destaque";
 const FALLBACK_TAG = "Beleza";
 const CARD_MIN_HEIGHT = "26rem";
 const TITLE_MIN_HEIGHT = "3.25rem";
-const CURRENCY = new Intl.NumberFormat("pt-BR", {
+const CURRENCY = new Intl.NumberFormat("pt-AO", {
   style: "currency",
-  currency: "BRL",
+  currency: "AOA",
 });
 
 const formatCurrency = (value?: number | null) =>
@@ -40,7 +40,7 @@ const formatCurrency = (value?: number | null) =>
 
 const formatDistance = (distance?: number | null) => {
   if (typeof distance !== "number") return null;
-  const formatter = new Intl.NumberFormat("pt-BR", {
+  const formatter = new Intl.NumberFormat("pt-AO", {
     maximumFractionDigits: distance < 10 ? 1 : 0,
     minimumFractionDigits: distance < 10 ? 1 : 0,
   });
@@ -79,7 +79,8 @@ export const ServiceItem = ({ service }: ServiceItemProps) => {
   const formattedLocation = formatLocation(address, city, state, country);
   const formattedPrice = formatCurrency(priceFrom);
   const formattedDistance = formatDistance(distanceInKm);
-  const displayTags = tags && tags.length > 0 ? tags.slice(0, 3) : [FALLBACK_TAG];
+  const displayTags =
+    tags && tags.length > 0 ? tags.slice(0, 3) : [FALLBACK_TAG];
   const productHref = slug ? `/services/${slug}` : "/services";
 
   return (
@@ -177,9 +178,11 @@ export const ServiceItem = ({ service }: ServiceItemProps) => {
       <Button
         size="lg"
         className="bg-pink-600 text-white font-bold hover:bg-pink-700"
-        asChild
+        // asChild
+        disabled
       >
-        <Link href={productHref}>Ver serviços</Link>
+        Agendar serviço
+        {/* <Link href={productHref}>Ver serviços</Link> */}
       </Button>
     </article>
   );

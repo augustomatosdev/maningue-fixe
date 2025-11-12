@@ -165,18 +165,7 @@ const brands = [
 ];
 
 // CATEGORIES
-const categories = [
-  {
-    id: "cat_1",
-    name: "Skincare",
-    slug: "skincare",
-    description: "Complete skincare solutions for every skin type",
-    image:
-      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=600&fit=crop",
-    thumbnail:
-      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&h=300&fit=crop",
-    productCount: 8,
-  },
+const productCategories = [
   {
     id: "cat_2",
     name: "Makeup",
@@ -187,10 +176,23 @@ const categories = [
     thumbnail:
       "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=300&h=300&fit=crop",
     productCount: 6,
+    icon: "/png-icons/makeup.png",
+  },
+  {
+    id: "cat_5",
+    name: "Bath&Body",
+    slug: "bath-and-body",
+    description: "Relax and indulge with our bath and body collection",
+    image:
+      "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=800&h=600&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=300&h=300&fit=crop",
+    productCount: 3,
+    icon: "/png-icons/bath.png",
   },
   {
     id: "cat_3",
-    name: "Hair Care",
+    name: "Cabelo",
     slug: "hair-care",
     description: "Nourish and style your hair",
     image:
@@ -198,17 +200,67 @@ const categories = [
     thumbnail:
       "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=300&h=300&fit=crop",
     productCount: 3,
+    icon: "/png-icons/toiletries.png",
   },
   {
-    id: "cat_4",
-    name: "Body Care",
-    slug: "body-care",
-    description: "Pamper your body from head to toe",
+    id: "cat_1",
+    name: "Skincare",
+    slug: "skincare",
+    description: "Complete skincare solutions for every skin type",
     image:
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=600&fit=crop",
     thumbnail:
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=300&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&h=300&fit=crop",
+    productCount: 8,
+    icon: "/png-icons/skincare.png",
+  },
+  {
+    id: "cat_6",
+    name: "Mamãe e Bebê",
+    slug: "mom-and-baby",
+    description: "Complete mom and baby solutions",
+    image:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=600&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&h=300&fit=crop",
     productCount: 3,
+    icon: "/png-icons/mother.png",
+  },
+  {
+    id: "cat_7",
+    name: "Perfumaria",
+    slug: "perfume",
+    description: "Complete perfume solutions",
+    image:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=600&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&h=300&fit=crop",
+    productCount: 3,
+    icon: "/png-icons/perfume.png",
+  },
+  {
+    id: "cat_8",
+    name: "Cuidado Pessoal",
+    slug: "personal-care",
+    description: "Complete personal care solutions",
+    image:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=600&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&h=300&fit=crop",
+    productCount: 3,
+    icon: "/png-icons/personal-hygiene.png",
+  },
+  {
+    id: "cat_9",
+    name: "Bem-estar e Saúde",
+    slug: "wellness-and-health",
+    description: "Complete wellness and health solutions",
+    image:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=600&fit=crop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&h=300&fit=crop",
+    productCount: 3,
+    icon: "/png-icons/cardiology.png",
   },
 ];
 
@@ -223,9 +275,9 @@ const products = [
     vendorId: "vendor_1",
     brandId: "brand_1",
     categoryId: "cat_1",
-    price: 68.0,
-    compareAtPrice: 85.0,
-    cost: 34.0,
+    price: 68000.0,
+    compareAtPrice: 85000.0,
+    cost: 34000.0,
     sku: "VIT-C-SER-001",
     barcode: "1234567890123",
     inventory: 156,
@@ -258,8 +310,8 @@ const products = [
       {
         id: "var_1_1",
         title: "30ml",
-        price: 68.0,
-        compareAtPrice: 85.0,
+        price: 68000.0,
+        compareAtPrice: 85000.0,
         sku: "VIT-C-SER-001-30ML",
         inventory: 156,
         size: "30ml",
@@ -268,8 +320,8 @@ const products = [
       {
         id: "var_1_2",
         title: "50ml",
-        price: 98.0,
-        compareAtPrice: 120.0,
+        price: 98000.0,
+        compareAtPrice: 120000.0,
         sku: "VIT-C-SER-001-50ML",
         inventory: 89,
         size: "50ml",
@@ -288,9 +340,9 @@ const products = [
     vendorId: "vendor_1",
     brandId: "brand_7",
     categoryId: "cat_1",
-    price: 89.0,
-    compareAtPrice: 115.0,
-    cost: 45.0,
+    price: 89000.0,
+    compareAtPrice: 115000.0,
+    cost: 45000.0,
     sku: "RET-NIG-CRM-002",
     barcode: "1234567890124",
     inventory: 94,
@@ -323,8 +375,8 @@ const products = [
       {
         id: "var_2_1",
         title: "50ml",
-        price: 89.0,
-        compareAtPrice: 115.0,
+        price: 89000.0,
+        compareAtPrice: 115000.0,
         sku: "RET-NIG-CRM-002-50ML",
         inventory: 94,
         size: "50ml",
@@ -343,9 +395,9 @@ const products = [
     vendorId: "vendor_2",
     brandId: "brand_2",
     categoryId: "cat_1",
-    price: 32.0,
-    compareAtPrice: 42.0,
-    cost: 16.0,
+    price: 32000.0,
+    compareAtPrice: 42000.0,
+    cost: 16000.0,
     sku: "ORG-RSE-TON-003",
     barcode: "1234567890125",
     inventory: 203,
@@ -371,8 +423,8 @@ const products = [
       {
         id: "var_3_1",
         title: "150ml",
-        price: 32.0,
-        compareAtPrice: 42.0,
+        price: 32000.0,
+        compareAtPrice: 42000.0,
         sku: "ORG-RSE-TON-003-150ML",
         inventory: 203,
         size: "150ml",
@@ -381,8 +433,8 @@ const products = [
       {
         id: "var_3_2",
         title: "250ml",
-        price: 48.0,
-        compareAtPrice: 62.0,
+        price: 48000.0,
+        compareAtPrice: 62000.0,
         sku: "ORG-RSE-TON-003-250ML",
         inventory: 127,
         size: "250ml",
@@ -401,9 +453,9 @@ const products = [
     vendorId: "vendor_2",
     brandId: "brand_5",
     categoryId: "cat_1",
-    price: 56.0,
-    compareAtPrice: 72.0,
-    cost: 28.0,
+    price: 56000.0,
+    compareAtPrice: 72000.0,
+    cost: 28000.0,
     sku: "HYA-MOS-004",
     barcode: "1234567890126",
     inventory: 167,
@@ -436,8 +488,8 @@ const products = [
       {
         id: "var_4_1",
         title: "50ml",
-        price: 56.0,
-        compareAtPrice: 72.0,
+        price: 56000.0,
+        compareAtPrice: 72000.0,
         sku: "HYA-MOS-004-50ML",
         inventory: 167,
         size: "50ml",
@@ -456,9 +508,9 @@ const products = [
     vendorId: "vendor_2",
     brandId: "brand_2",
     categoryId: "cat_1",
-    price: 38.0,
-    compareAtPrice: 48.0,
-    cost: 19.0,
+    price: 38000.0,
+    compareAtPrice: 48000.0,
+    cost: 19000.0,
     sku: "GEN-CLN-OIL-007",
     barcode: "1234567890129",
     inventory: 215,
@@ -484,8 +536,8 @@ const products = [
       {
         id: "var_7_1",
         title: "200ml",
-        price: 38.0,
-        compareAtPrice: 48.0,
+        price: 38000.0,
+        compareAtPrice: 48000.0,
         sku: "GEN-CLN-OIL-007-200ML",
         inventory: 215,
         size: "200ml",
@@ -505,9 +557,9 @@ const products = [
     vendorId: "vendor_4",
     brandId: "brand_4",
     categoryId: "cat_2",
-    price: 28.0,
-    compareAtPrice: 36.0,
-    cost: 14.0,
+    price: 28000.0,
+    compareAtPrice: 36000.0,
+    cost: 14000.0,
     sku: "VEL-MAT-LIP-009",
     barcode: "1234567890131",
     inventory: 245,
@@ -515,7 +567,7 @@ const products = [
     weightUnit: "g",
     featured: true,
     published: true,
-    rating: 4.8,
+    rating: 3,
     reviewCount: 412,
     tags: ["lipstick", "matte", "long-lasting", "makeup"],
     thumbnail:
@@ -540,8 +592,8 @@ const products = [
       {
         id: "var_9_1",
         title: "Ruby Red",
-        price: 28.0,
-        compareAtPrice: 36.0,
+        price: 28000.0,
+        compareAtPrice: 36000.0,
         sku: "VEL-MAT-LIP-009-RED",
         inventory: 67,
         color: "Ruby Red",
@@ -551,8 +603,8 @@ const products = [
       {
         id: "var_9_2",
         title: "Nude Bliss",
-        price: 28.0,
-        compareAtPrice: 36.0,
+        price: 28000.0,
+        compareAtPrice: 36000.0,
         sku: "VEL-MAT-LIP-009-NUDE",
         inventory: 89,
         color: "Nude Bliss",
@@ -562,8 +614,8 @@ const products = [
       {
         id: "var_9_3",
         title: "Berry Burst",
-        price: 28.0,
-        compareAtPrice: 36.0,
+        price: 28000.0,
+        compareAtPrice: 36000.0,
         sku: "VEL-MAT-LIP-009-BERRY",
         inventory: 89,
         color: "Berry Burst",
@@ -583,9 +635,9 @@ const products = [
     vendorId: "vendor_4",
     brandId: "brand_4",
     categoryId: "cat_2",
-    price: 52.0,
-    compareAtPrice: 68.0,
-    cost: 26.0,
+    price: 52000.0,
+    compareAtPrice: 68000.0,
+    cost: 26000.0,
     sku: "HD-FND-010",
     barcode: "1234567890132",
     inventory: 178,
@@ -618,8 +670,8 @@ const products = [
       {
         id: "var_10_1",
         title: "Fair 1.0",
-        price: 52.0,
-        compareAtPrice: 68.0,
+        price: 52000.0,
+        compareAtPrice: 68000.0,
         sku: "HD-FND-010-F1",
         inventory: 45,
         shade: "Fair 1.0",
@@ -628,8 +680,8 @@ const products = [
       {
         id: "var_10_2",
         title: "Light 2.5",
-        price: 52.0,
-        compareAtPrice: 68.0,
+        price: 52000.0,
+        compareAtPrice: 68000.0,
         sku: "HD-FND-010-L2",
         inventory: 52,
         shade: "Light 2.5",
@@ -638,8 +690,8 @@ const products = [
       {
         id: "var_10_3",
         title: "Medium 4.0",
-        price: 52.0,
-        compareAtPrice: 68.0,
+        price: 52000.0,
+        compareAtPrice: 68000.0,
         sku: "HD-FND-010-M4",
         inventory: 48,
         shade: "Medium 4.0",
@@ -648,8 +700,8 @@ const products = [
       {
         id: "var_10_4",
         title: "Deep 6.5",
-        price: 52.0,
-        compareAtPrice: 68.0,
+        price: 52000.0,
+        compareAtPrice: 68000.0,
         sku: "HD-FND-010-D6",
         inventory: 33,
         shade: "Deep 6.5",
@@ -669,9 +721,9 @@ const products = [
     vendorId: "vendor_2",
     brandId: "brand_2",
     categoryId: "cat_3",
-    price: 48.0,
-    compareAtPrice: 62.0,
-    cost: 24.0,
+    price: 48000.0,
+    compareAtPrice: 62000.0,
+    cost: 24000.0,
     sku: "ARG-HAIR-015",
     barcode: "1234567890137",
     inventory: 167,
@@ -697,8 +749,8 @@ const products = [
       {
         id: "var_15_1",
         title: "50ml",
-        price: 48.0,
-        compareAtPrice: 62.0,
+        price: 48000.0,
+        compareAtPrice: 62000.0,
         sku: "ARG-HAIR-015-50ML",
         inventory: 167,
         size: "50ml",
@@ -717,9 +769,9 @@ const products = [
     vendorId: "vendor_2",
     brandId: "brand_5",
     categoryId: "cat_3",
-    price: 38.0,
-    compareAtPrice: 48.0,
-    cost: 19.0,
+    price: 38000.0,
+    compareAtPrice: 48000.0,
+    cost: 19000.0,
     sku: "KER-SHP-016",
     barcode: "1234567890138",
     inventory: 203,
@@ -745,8 +797,8 @@ const products = [
       {
         id: "var_16_1",
         title: "300ml",
-        price: 38.0,
-        compareAtPrice: 48.0,
+        price: 38000.0,
+        compareAtPrice: 48000.0,
         sku: "KER-SHP-016-300ML",
         inventory: 203,
         size: "300ml",
@@ -765,9 +817,9 @@ const products = [
     vendorId: "vendor_2",
     brandId: "brand_5",
     categoryId: "cat_3",
-    price: 42.0,
-    compareAtPrice: 54.0,
-    cost: 21.0,
+    price: 42000.0,
+    compareAtPrice: 54000.0,
+    cost: 21000.0,
     sku: "DEP-HAIR-MSK-017",
     barcode: "1234567890139",
     inventory: 145,
@@ -793,8 +845,8 @@ const products = [
       {
         id: "var_17_1",
         title: "250ml",
-        price: 42.0,
-        compareAtPrice: 54.0,
+        price: 42000.0,
+        compareAtPrice: 54000.0,
         sku: "DEP-HAIR-MSK-017-250ML",
         inventory: 145,
         size: "250ml",
@@ -813,9 +865,9 @@ const products = [
     vendorId: "vendor_1",
     brandId: "brand_6",
     categoryId: "cat_4",
-    price: 44.0,
-    compareAtPrice: 56.0,
-    cost: 22.0,
+    price: 44000.0,
+    compareAtPrice: 56000.0,
+    cost: 22000.0,
     sku: "LUX-BOD-BUT-018",
     barcode: "1234567890140",
     inventory: 189,
@@ -841,8 +893,8 @@ const products = [
       {
         id: "var_18_1",
         title: "200ml",
-        price: 44.0,
-        compareAtPrice: 56.0,
+        price: 44000.0,
+        compareAtPrice: 56000.0,
         sku: "LUX-BOD-BUT-018-200ML",
         inventory: 189,
         size: "200ml",
@@ -861,9 +913,9 @@ const products = [
     vendorId: "vendor_2",
     brandId: "brand_2",
     categoryId: "cat_4",
-    price: 36.0,
-    compareAtPrice: 46.0,
-    cost: 18.0,
+    price: 36000.0,
+    compareAtPrice: 46000.0,
+    cost: 18000.0,
     sku: "SUG-SCR-019",
     barcode: "1234567890141",
     inventory: 167,
@@ -889,8 +941,8 @@ const products = [
       {
         id: "var_19_1",
         title: "Lavender Dreams",
-        price: 36.0,
-        compareAtPrice: 46.0,
+        price: 36000.0,
+        compareAtPrice: 46000.0,
         sku: "SUG-SCR-019-LAV",
         inventory: 67,
         scent: "Lavender Dreams",
@@ -899,8 +951,8 @@ const products = [
       {
         id: "var_19_2",
         title: "Citrus Burst",
-        price: 36.0,
-        compareAtPrice: 46.0,
+        price: 36000.0,
+        compareAtPrice: 46000.0,
         sku: "SUG-SCR-019-CIT",
         inventory: 54,
         scent: "Citrus Burst",
@@ -909,8 +961,8 @@ const products = [
       {
         id: "var_19_3",
         title: "Rose Garden",
-        price: 36.0,
-        compareAtPrice: 46.0,
+        price: 36000.0,
+        compareAtPrice: 46000.0,
         sku: "SUG-SCR-019-RSE",
         inventory: 46,
         scent: "Rose Garden",
@@ -929,9 +981,9 @@ const products = [
     vendorId: "vendor_1",
     brandId: "brand_6",
     categoryId: "cat_4",
-    price: 22.0,
-    compareAtPrice: 28.0,
-    cost: 11.0,
+    price: 22000.0,
+    compareAtPrice: 28000.0,
+    cost: 11000.0,
     sku: "HYD-HND-CRM-020",
     barcode: "1234567890142",
     inventory: 298,
@@ -957,8 +1009,8 @@ const products = [
       {
         id: "var_20_1",
         title: "75ml",
-        price: 22.0,
-        compareAtPrice: 28.0,
+        price: 22000.0,
+        compareAtPrice: 28000.0,
         sku: "HYD-HND-CRM-020-75ML",
         inventory: 298,
         size: "75ml",
@@ -1114,17 +1166,26 @@ const collections = [
 export const mockData = {
   vendors,
   brands,
-  categories,
+  productCategories,
   products,
   collections,
 };
 
 // Individual exports for convenience
-export { vendors, brands, categories, products, collections };
+export { vendors, brands, productCategories, products, collections };
 
 // Helper functions
 export const getProductsByCategory = (categoryId: string) => {
   return products.filter((p) => p.categoryId === categoryId);
+};
+
+export const getProductsByCategorySlug = (categorySlug: string) => {
+  const category = productCategories.find((c) => c.slug === categorySlug);
+  if (!category) return [];
+  const productsByCategory = products.filter(
+    (p: any) => p.categoryId === category.id
+  );
+  return productsByCategory;
 };
 
 export const getProductsByVendor = (vendorId: string) => {
@@ -1141,6 +1202,24 @@ export const getFeaturedProducts = () => {
 
 export const getProductById = (productId: string) => {
   return products.find((p) => p.id === productId);
+};
+
+export const getProductBySlug = (productSlug: string) => {
+  return products.find((p) => p.slug === productSlug);
+};
+
+export const getVendorById = (vendorId: string) => {
+  return vendors.find((v) => v.id === vendorId);
+};
+
+export const getProducts = () => {
+  return products;
+};
+
+export const getProductsByBrandSlug = (brandSlug: string) => {
+  const brand = brands.find((b) => b.slug === brandSlug);
+  if (!brand) return [];
+  return products.filter((p) => p.brandId === brand.id);
 };
 
 export const getCollectionProducts = (collectionId: string) => {

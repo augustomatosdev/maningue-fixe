@@ -6,10 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {
-  ServiceItem,
-  type ServicePreview,
-} from "@/components/service-item";
+import { ServiceItem, type ServicePreview } from "@/components/service-item";
 
 interface ServicesCarouselProps {
   services: ServicePreview[];

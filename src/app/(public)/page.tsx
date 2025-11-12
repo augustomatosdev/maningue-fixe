@@ -92,61 +92,57 @@ const featuredServices: ServicePreview[] = vendors
 
 export default function Home() {
   return (
-    <>
-      <main>
-        <HeroCarousel />
+    <main>
+      <HeroCarousel />
 
-        <HomeSection
-          id="brands"
-          eyebrow="marcas"
-          title="Marcas parceiras"
-          subtitle=""
-        >
-          <BrandsCarousel brands={brands} />
-        </HomeSection>
+      <HomeSection
+        id="brands"
+        eyebrow="marcas"
+        title="Marcas parceiras"
+        subtitle=""
+      >
+        <BrandsCarousel brands={brands} />
+      </HomeSection>
 
-        <HomeSection
-          id="products"
-          eyebrow="produtos"
-          title="Conheça nossos produtos"
-          subtitle="Seleção atualizada com lançamentos, best-sellers e preços especiais."
-          cta={{ label: "Ver todos", href: "/products" }}
-        >
-          <ProductsCarousel products={products} />
-        </HomeSection>
+      <HomeSection
+        id="products"
+        eyebrow="produtos"
+        title="Conheça nossos produtos"
+        subtitle="Seleção atualizada com lançamentos, best-sellers e preços especiais."
+        cta={{ label: "Ver todos", href: "/products" }}
+      >
+        <ProductsCarousel products={products} />
+      </HomeSection>
 
-        <HomeSection
-          id="services"
-          eyebrow="serviços"
-          title="Serviços recomendados"
-          subtitle="Experiências de beleza presenciais com serviços perto de você."
-          cta={{ label: "Ver todos", href: "/services" }}
-        >
-          <ServicesCarousel services={featuredServices} />
-        </HomeSection>
+      <HomeSection
+        id="services"
+        eyebrow="serviços"
+        title="Serviços recomendados"
+        subtitle="Experiências de beleza presenciais com serviços perto de você."
+        cta={{ label: "Ver todos", href: "/services" }}
+      >
+        <ServicesCarousel services={featuredServices} />
+      </HomeSection>
 
-        <section className="py-12">
-          <div className="mx-auto max-w-screen-2xl px-4">
-            <MonthHighlight />
-          </div>
-        </section>
+      <section className="py-12">
+        <div className="mx-auto max-w-screen-2xl">
+          <MonthHighlight />
+        </div>
+      </section>
 
-        <section className="py-12">
-          <div className="mx-auto max-w-screen-2xl px-4">
-            <AppDownload />
-          </div>
-        </section>
+      <section>
+        <div className="mx-auto max-w-screen-2xl px-4">
+          <AppDownload />
+        </div>
+      </section>
 
-        <section className="py-12">
-          <InstagramSection />
-        </section>
+      <section className="py-12">
+        <InstagramSection />
+      </section>
 
-        <section className="py-12">
-          <SubscribeSection />
-        </section>
-      </main>
-
-      <Footer />
-    </>
+      <section className="py-12">
+        <SubscribeSection />
+      </section>
+    </main>
   );
 }
