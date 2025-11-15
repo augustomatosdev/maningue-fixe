@@ -132,7 +132,7 @@ export default function Footer() {
       <div className="border-t border-white/20">
         <div className="max-w-screen-2xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/mf-logo-white.svg" alt="Belleza" className="h-12" />
+            <img src="/mf-logo-white.svg" alt="Bellezia" className="h-12" />
             <div className="flex items-center justify-center gap-4">
               <a
                 href="https://instagram.com"
@@ -167,7 +167,7 @@ export default function Footer() {
       <div className="border-t border-white/20 bg-pink-700">
         <div className="max-w-screen-2xl mx-auto px-4 py-6">
           <p className="text-center text-xs opacity-90">
-            Todos os direitos reservados © 2025 | Belleza
+            Todos os direitos reservados © 2025 | Bellezia
           </p>
         </div>
       </div>

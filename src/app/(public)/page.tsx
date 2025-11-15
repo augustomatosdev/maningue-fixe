@@ -14,9 +14,9 @@ import { brands, products, vendors } from "@/lib/mock-data";
 import type { ServicePreview } from "@/components/service-item";
 
 export const metadata: Metadata = {
-  title: "Belleza | Beleza e bem-estar com curadoria",
+  title: "Bellezia | Beleza e bem-estar com curadoria",
   description:
-    "Descubra marcas exclusivas, produtos favoritos e serviços de beleza recomendados pela curadoria Belleza.",
+    "Descubra marcas exclusivas, produtos favoritos e serviços de beleza recomendados pela curadoria Bellezia.",
 };
 
 interface HomeSectionProps {

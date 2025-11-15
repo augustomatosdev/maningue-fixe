@@ -6,13 +6,13 @@ export const InstagramSection = () => {
     <div className="my-12 max-w-screen-2xl mx-auto">
       <div className="flex items-center justify-between">
         <h1 className="text-center text-4xl font-bold text-pink-600 w-full">
-          siga @Belleza
+          siga @Bellezia
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
         {Array.from({ length: 4 }).map((_, index: number) => (
           <a
-            href="https://www.instagram.com/Belleza"
+            href="https://www.instagram.com/Bellezia"
             target="_blank"
             rel="noopener noreferrer"
             key={index}

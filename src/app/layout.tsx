@@ -11,7 +11,7 @@ const inter = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Belleza | Beleza e bem-estar ao seu alcance",
+  title: "Bellezia | Beleza e bem-estar ao seu alcance",
   description:
     "Explore nossa seleção de cosméticos, skincare, maquiagem e serviços de beleza ao seu alcance.",
 };

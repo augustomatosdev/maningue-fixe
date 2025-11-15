@@ -138,8 +138,8 @@ export const MainHeader = () => {
         <Announcement />
         <div className="flex h-16 items-center justify-between px-4">
           <NavDrawer />
-          <Link href="/" aria-label="Belleza">
-            <img src="/mf-logo.svg" alt="Belleza" className="h-10" />
+          <Link href="/" aria-label="Bellezia">
+            <img src="/mf-logo.svg" alt="Bellezia" className="h-10" />
           </Link>
           <div className="flex items-center gap-5">
             <Link
@@ -168,8 +168,8 @@ export const MainHeader = () => {
       <div className="hidden lg:block">
         <Announcement />
         <div className="flex items-center justify-between gap-6 px-6 py-4">
-          <Link href="/" aria-label="Belleza">
-            <img src="/mf-logo.svg" alt="Belleza" className="h-12" />
+          <Link href="/" aria-label="Bellezia">
+            <img src="/mf-logo.svg" alt="Bellezia" className="h-12" />
           </Link>
           <SearchBar className="w-full max-w-2xl" />
           <nav
