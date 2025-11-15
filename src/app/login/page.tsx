@@ -38,7 +38,7 @@ const LoginPage = () => {
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="space-y-6 bg-pink-600/10 px-8 py-12">
               <Link href="/" className="inline-flex items-center gap-2 text-sm">
-                <img src="/mf-logo.svg" alt="Maningue Fixe" className="h-10" />
+                <img src="/mf-logo.svg" alt="Belleza" className="h-10" />
               </Link>
               <h1 className="text-3xl font-bold text-gray-900">
                 Acesse sua conta

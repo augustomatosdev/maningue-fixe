@@ -14,9 +14,9 @@ import { brands, products, vendors } from "@/lib/mock-data";
 import type { ServicePreview } from "@/components/service-item";
 
 export const metadata: Metadata = {
-  title: "Maningue Fixe | Beleza e bem-estar com curadoria",
+  title: "Belleza | Beleza e bem-estar com curadoria",
   description:
-    "Descubra marcas exclusivas, produtos favoritos e serviços de beleza recomendados pela curadoria Maningue Fixe.",
+    "Descubra marcas exclusivas, produtos favoritos e serviços de beleza recomendados pela curadoria Belleza.",
 };
 
 interface HomeSectionProps {

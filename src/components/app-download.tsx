@@ -4,15 +4,15 @@ export const AppDownload = () => {
   return (
     <div className="my-12 max-w-screen-md mx-auto space-y-8 flex flex-col items-center justify-center">
       <h1 className="text-center text-4xl font-bold text-pink-600">
-        baixe o app da maninguefixe
+        baixe o app da Belleza
       </h1>
       <p className="text-center text-xl text-gray-500">
         Reserve experiências inesquecíveis, encontre promoções muito mais mais
-        com o aplicativo para celular da ManingueFixe
+        com o aplicativo para celular da Belleza
       </p>
       <div className="flex items-center justify-center gap-8">
         <a
-          href="https://apps.apple.com/br/app/maninguefixe/id6733744901"
+          href="https://apps.apple.com/br/app/Belleza/id6733744901"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -23,7 +23,7 @@ export const AppDownload = () => {
           />
         </a>
         <a
-          href="https://play.google.com/store/apps/details?id=com.maninguefixe"
+          href="https://play.google.com/store/apps/details?id=com.Belleza"
           target="_blank"
           rel="noopener noreferrer"
         >

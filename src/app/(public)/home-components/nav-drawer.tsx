@@ -34,12 +34,12 @@ const DRAWER_SHORTCUTS = [
 const APP_LINKS = [
   {
     label: "App Store",
-    href: "https://apps.apple.com/br/app/maninguefixe/id6733744901",
+    href: "https://apps.apple.com/br/app/Belleza/id6733744901",
     image: "/apple-store-download.svg",
   },
   {
     label: "Google Play",
-    href: "https://play.google.com/store/apps/details?id=com.maninguefixe",
+    href: "https://play.google.com/store/apps/details?id=com.Belleza",
     image: "/google-play-download.svg",
   },
 ];
@@ -63,8 +63,8 @@ export function NavDrawer() {
         <DrawerHeader className="border-b border-pink-100 pb-4">
           <DrawerTitle className="sr-only">Menu de navegação</DrawerTitle>
           <div className="flex items-center justify-between gap-4">
-            <Link href="/" aria-label="Maningue Fixe">
-              <img src="/mf-logo.svg" alt="Maningue Fixe" className="h-10" />
+            <Link href="/" aria-label="Belleza">
+              <img src="/mf-logo.svg" alt="Belleza" className="h-10" />
             </Link>
             <DrawerClose asChild>
               <Button
@@ -127,7 +127,7 @@ export function NavDrawer() {
         <DrawerFooter className="border-t border-pink-100">
           <div className="flex flex-col gap-4 text-center">
             <p className="text-sm font-semibold text-gray-800">
-              Baixe o app Maningue Fixe
+              Baixe o app Belleza
             </p>
             <div className="flex items-center justify-center gap-4">
               {APP_LINKS.map((app) => (

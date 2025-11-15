@@ -6,9 +6,9 @@ const vendors = [
     slug: "luxe-beauty-boutique",
     description:
       "Premium beauty products curated for the modern woman. Specializing in luxury skincare and makeup from international brands.",
-    logo: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=200&h=200&fit=crop",
+    logo: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=200&h=200&fit=crop",
     coverImage:
-      "https://images.unsplash.com/photo-1583001809515-fd1458521ec8?w=1200&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?w=1200&h=400&fit=crop",
     email: "contact@luxebeauty.com",
     phone: "+1 (555) 123-4567",
     address: "123 Beauty Lane, New York, NY 10001",
@@ -40,9 +40,9 @@ const vendors = [
     slug: "k-beauty-paradise",
     description:
       "Authentic Korean beauty products imported directly from Seoul. Experience the K-beauty revolution with innovative skincare.",
-    logo: "https://images.unsplash.com/photo-1621607513920-5f8e3df7f79e?w=200&h=200&fit=crop",
+    logo: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=200&h=200&fit=crop",
     coverImage:
-      "https://images.unsplash.com/photo-1556228852-80a1e4e10e76?w=1200&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?w=1200&h=400&fit=crop",
     email: "info@kbeautyparadise.com",
     phone: "+1 (555) 345-6789",
     address: "789 Seoul Street, San Francisco, CA 94102",
